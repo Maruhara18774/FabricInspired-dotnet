@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "+WMVGtjWNCtpW9FM3jztNW1zqKfCwpcSCgAw2g3gQOs=",
+  "Source": "Fabric.BackendAPI",
+  "BasePath": "_content/Fabric.BackendAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
