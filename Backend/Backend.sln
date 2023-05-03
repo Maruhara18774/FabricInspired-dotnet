@@ -3,15 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fabric.Data", "Fabric.Data", "{A8C392B1-33B5-49A7-A4D5-812D7E8518D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fabric.BackendAPI", "Fabric.BackendAPI\Fabric.BackendAPI.csproj", "{25D0CEF0-3337-448C-9F50-A34AB087F148}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{84FD8D63-194A-43CE-90A7-A0BCC90D981A}"
-	ProjectSection(SolutionItems) = preProject
-		Product.cs = Product.cs
-		BaseAttribute.cs = BaseAttribute.cs
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fabric.BackendAPI", "Fabric.BackendAPI\Fabric.BackendAPI.csproj", "{25D0CEF0-3337-448C-9F50-A34AB087F148}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fabric.Data", "Fabric.Data\Fabric.Data.csproj", "{3F46E8DE-4466-4800-ADD2-F3723BEABC69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +17,13 @@ Global
 		{25D0CEF0-3337-448C-9F50-A34AB087F148}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25D0CEF0-3337-448C-9F50-A34AB087F148}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25D0CEF0-3337-448C-9F50-A34AB087F148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F46E8DE-4466-4800-ADD2-F3723BEABC69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F46E8DE-4466-4800-ADD2-F3723BEABC69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F46E8DE-4466-4800-ADD2-F3723BEABC69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F46E8DE-4466-4800-ADD2-F3723BEABC69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{84FD8D63-194A-43CE-90A7-A0BCC90D981A} = {A8C392B1-33B5-49A7-A4D5-812D7E8518D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1F9C7D69-A40F-47E5-87A3-D46E32BBD755}
