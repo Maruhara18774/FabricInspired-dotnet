@@ -1,0 +1,5 @@
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\Fabric.Data.csproj.AssemblyReference.cache
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\Fabric.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\Fabric.Data.AssemblyInfoInputs.cache
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\Fabric.Data.AssemblyInfo.cs
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\Fabric.Data.csproj.CoreCompileInputs.cache

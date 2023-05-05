@@ -23,6 +23,8 @@ namespace Fabric.Data.Entities
         public virtual Category? Category { get; set;}
         public virtual List<Image>? Images { get; set; }
         public virtual List<Sale>? Sales { get; set; }
+        public virtual List<Moonboard>? Moonboards { get; set; }
+        public virtual List<OrderDetail>? OrderDetails { get; set; }
 
     }
 }

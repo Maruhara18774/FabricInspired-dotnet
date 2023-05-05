@@ -4,20 +4,19 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Fabric.Data.Configurations
 {
-    public class CategoryConfiguration : IEntityTypeConfiguration<Category>
+    public class SaleConfiguration : IEntityTypeConfiguration<Sale>
     {
-        public void Configure(EntityTypeBuilder<Category> builder)
+        public void Configure(EntityTypeBuilder<Sale> builder)
         {
-            builder.ToTable("Categories");
-
+            builder.ToTable("Sales");
             builder.HasKey(x => x.ID);
 
+            builder.HasOne(x => x.Product).WithMany(x => x.Sales).HasForeignKey(x => x.ProductID);
         }
     }
 }

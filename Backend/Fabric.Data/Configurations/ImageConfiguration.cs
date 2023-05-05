@@ -13,7 +13,7 @@ namespace Fabric.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Image> builder)
         {
-            builder.ToTable("Image");
+            builder.ToTable("Images");
 
             builder.HasKey(x => x.ID);
             builder.HasOne(x => x.Product).WithMany(x => x.Images).HasForeignKey(x => x.ProductID);

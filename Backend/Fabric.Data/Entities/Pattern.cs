@@ -9,6 +9,6 @@ namespace Fabric.Data.Entities
     public class Pattern: BaseAttribute
     {
         public string? Name { get; set; }
-        public virtual List<ProductPattern>? ProductPatterns { get; set; }
+        public virtual List<Product>? Products { get; set; }
     }
 }
