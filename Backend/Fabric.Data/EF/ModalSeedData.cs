@@ -1,6 +1,7 @@
 ﻿using Fabric.Data.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileSystemGlobbing.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,12 +31,14 @@ namespace Fabric.Data.EF
             categoryData.Add(("Linen Fabrics", "Browse all our linen fabrics here, and use the filter to refine your options! Here at The Fabric Store, linen is one of our favourite fibres. As well as being super easy to sew, linen fabric has a lovely earthy feel, starting off crisp but softening beautifully in time with wash and wear. The flax plant, from which linen fibres are harvested, consumes far less water than cotton and requires fewer chemicals and pesticides making it a great eco fabric choice for the environmentally conscious. Browse our huge range of linen fabrics online here, including our exclusive ranges and our ever-evolving collection of deadstock linens as well! Our exclusive ranges include certified Organic Linen, Gingham Linen, Vintage Finish Linen and Heavyweight Linen. Find an array of patterns, textures and colours in our deadstock linens too! Shop linen fabrics online today!"));
             categoryData.Add(("Cotton Fabrics", "Browse our huge range of cotton fabrics here and use the filter to refine your options. This collection includes our exclusive certified Organic Cotton Sweatshirting + Rib and Upcycled Cotton ranges. Our evolving array of designer & Liberty deadstock cotton fabrics provides an ongoing treasure hunt for many a seasoned sewist, with lots of these rolls one-of-a-kind and never to be seen again! Whether you're looking for cotton prints, stripes, checks, shirtings, sateens, denims, chambrays, twills, corduroys, sateens or knitted fabrics, you'll be sure to find something suitable online! Shop cotton fabrics online today!"));
             categoryData.Add(("Jersey & Knitted Fabrics", "Browse all our cotton, viscose & synthetic blend knitted fabrics here and use the filter to refine your options. This collection includes our exclusive certified Organic Cotton Sweatshirting + Rib too. Our evolving array of designer & Liberty deadstock knitted fabrics provides an ongoing treasure hunt for many a seasoned sewist, with lots of these rolls of-of-a-kind and never to be seen again! Whether you're looking for relaxed linens, super soft cottons, fluid viscose and stretchy activewear jerseys. For a casual project with flair choose our printed Liberty cotton knits, and for the cooler days, our range of sweatshirtings are ideal! Shop knitted & jersey fabric online today!"));
-            int i = 0;
-            foreach (var category in categoryData)
+
+            for(var i = 0; i < categories.Count; i++)
             {
+                var key = "CTGR" + IDGenerator(i);
+                var category = categoryData[i];
                 categories.Add(new Category()
                 {
-                    ID = "CTGR" + IDGenerator(i++),
+                    ID = key,
                     Name = category.Item1,
                     Description = category.Item2,
                 });
@@ -46,12 +49,13 @@ namespace Fabric.Data.EF
         static void AddPattern(ModelBuilder modelBuilder)
         {
             string[] patternName = { "Abstract", "Animal", "Check", "Conversational", "Floral", "Geometric", "Large Scale", "Motif", "No Pattern", "Paisley" };
-            int i = 0;
-            foreach ( var pattern in patternName)
+            for(var i = 0; i < patternName.Length; i++)
             {
-                patterns.Add(new Pattern() {
-                    ID = "PTRN" + IDGenerator(i++),
-                    Name = pattern,
+                var key = "PTRN" + IDGenerator(i);
+                patterns.Add(new Pattern()
+                {
+                    ID = key,
+                    Name = patternName[i],
                 });
             }
             modelBuilder.Entity<Pattern>().HasData(patterns);
@@ -62,9 +66,10 @@ namespace Fabric.Data.EF
             settingData.Add(("Width", "0", "49"));
             settingData.Add(("Width", "50", "60"));
             List<Setting> settings = new List<Setting>();
-            int i = 0;
-            foreach( var setting in settingData)
+            for(var i = 0; i < settingData.Count; i++)
             {
+                var key = "STTG" + IDGenerator(i);
+                var setting = settingData[i];
                 settings.Add(new Setting()
                 {
                     ID = "STTG" + IDGenerator(i++),
@@ -141,13 +146,13 @@ namespace Fabric.Data.EF
                 {
                     images.Add(new Image()
                     {
-                        ID = "IMGE" + IDGenerator(i++),
+                        ID = "IMGE" + IDGenerator(i),
                         ProductID = image.Item1,
                         Url = image2
                     });
+                    i = i + 1;
                 }
             }
-
 
             modelBuilder.Entity<Image>().HasData(images);
         }
