@@ -18,6 +18,8 @@ namespace Fabric.Data.EF
             AddCategory(modelBuilder);
             AddPattern(modelBuilder);
             AddSetting(modelBuilder);
+            AddProduct(modelBuilder);
+            AddImage(modelBuilder);
         }
         static void AddCategory(ModelBuilder modelBuilder)
         {
@@ -87,8 +89,8 @@ namespace Fabric.Data.EF
                 Weight = Enums.WeightEnum.Midweight,
                 Stretch = Enums.StretchEnum.NonStretch,
                 WovedIn = "Dalat City and Nam Dinh City, Vietnam",
-                PatternID = patterns.Where(x => x.Name == "No Pattern").Select(x => x.ID).SingleOrDefault(),
-                CategoryID = categories.Where(x => x.Name == "Merino Fabrics").Select(x => x.ID).SingleOrDefault(),
+                PatternID = patterns.Where(x => x.Name == "No Pattern").Select(x => x.ID).FirstOrDefault(),
+                CategoryID = categories.Where(x => x.Name == "Merino Fabrics").Select(x => x.ID).FirstOrDefault(),
                 Description = "// Our single jersey ZQ Premium Merino in our seasonal colour, Turmeric. This fabric is knitted from ZQ certified merino and produced just for us in our range of exclusive colours. The superfine merino fibre is spun into a single twist yarn, creating a slightly textural fabric with naturally occurring slubs throughout. The single jersey knit structure gives this fabric mechanical stretch and great drape. Beautifully soft, merino jersey is ideal for all seasons and perfect for next-to-skin basics and layering."
             });
             products.Add(new Product()
@@ -101,8 +103,8 @@ namespace Fabric.Data.EF
                 Weight = Enums.WeightEnum.Lightweight,
                 Stretch = Enums.StretchEnum.OneWay,
                 WovedIn = "Vietnam",
-                PatternID = patterns.Where(x => x.Name == "Large Scale").Select(x => x.ID).SingleOrDefault(),
-                CategoryID = categories.Where(x => x.Name == "Merino Fabrics").Select(x => x.ID).SingleOrDefault(),
+                PatternID = patterns.Where(x => x.Name == "Large Scale").Select(x => x.ID).FirstOrDefault(),
+                CategoryID = categories.Where(x => x.Name == "Merino Fabrics").Select(x => x.ID).FirstOrDefault(),
                 Description = "// This lightweight army green merino blend jersey has subtle pointelle holes, backed with a very fine plated stripe. Perfect for street and activewear for those chillier days."
             });
             products.Add(new Product()
@@ -115,8 +117,8 @@ namespace Fabric.Data.EF
                 Weight = Enums.WeightEnum.Midweight,
                 Stretch = Enums.StretchEnum.TwoWay,
                 WovedIn = "China",
-                PatternID = patterns.Where(x => x.Name == "Check").Select(x => x.ID).SingleOrDefault(),
-                CategoryID = categories.Where(x => x.Name == "Silk Fabrics").Select(x => x.ID).SingleOrDefault(),
+                PatternID = patterns.Where(x => x.Name == "Check").Select(x => x.ID).FirstOrDefault(),
+                CategoryID = categories.Where(x => x.Name == "Silk Fabrics").Select(x => x.ID).FirstOrDefault(),
                 Description = "// A deadstock silk/ cotton in teal and black. This lightweight fabric has been cleverly woven with sheer black warp striped with a  deep teal stripe, then a sheer black and teal striped weft creating a dimensional check fabric. A sheer fabric with a dry hand feel and no stretch. Ideal for shirts like the Bloom, dresses like the Paint or Ivy."
             });
 

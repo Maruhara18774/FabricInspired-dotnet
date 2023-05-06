@@ -23,6 +23,7 @@ namespace Fabric.Data.EF
 
             var optionBuilder = new DbContextOptionsBuilder<FabricDBContext>();
             optionBuilder.UseSqlServer(connectionString);
+            optionBuilder.EnableSensitiveDataLogging();
 
             return new FabricDBContext(optionBuilder.Options);
         }
