@@ -3,3 +3,12 @@ E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\Fabric.Data.G
 E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\Fabric.Data.AssemblyInfoInputs.cache
 E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\Fabric.Data.AssemblyInfo.cs
 E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\Fabric.Data.csproj.CoreCompileInputs.cache
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\bin\Debug\net6.0\Fabric.Data.deps.json
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\bin\Debug\net6.0\Fabric.Data.dll
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\bin\Debug\net6.0\Fabric.Data.pdb
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\Fabric.Data.dll
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\refint\Fabric.Data.dll
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\Fabric.Data.pdb
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\ref\Fabric.Data.dll
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\bin\Debug\net6.0\Fabric.Data.runtimeconfig.json
+E:\Code-Output\FabricInspired\Backend\Fabric.Data\obj\Debug\net6.0\Fabric.Data.genruntimeconfig.cache

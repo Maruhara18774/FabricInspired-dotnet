@@ -16,8 +16,9 @@ namespace Fabric.Data.Entities
         public WeightEnum Weight { get; set; }
         public StretchEnum Stretch { get; set; }
         public string? WovedIn { get; set; }
-        public int PatternID { get; set; }
-        public int CategoryID { get; set; }
+        public string? PatternID { get; set; }
+        public string? CategoryID { get; set; }
+        public string? Description { get; set; }
 
         public virtual Pattern?  Pattern { get; set; }
         public virtual Category? Category { get; set;}

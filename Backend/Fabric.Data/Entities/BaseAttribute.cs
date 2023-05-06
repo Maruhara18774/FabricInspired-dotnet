@@ -8,7 +8,7 @@ namespace Fabric.Data.Entities
 {
     public class BaseAttribute
     {
-        public int ID { get; set; }
+        public string? ID { get; set; }
         public bool Active { get; set; } = true;
         public DateTime Created { get; set; } = DateTime.Now;
         public DateTime Updated { get; set; } = DateTime.Now;

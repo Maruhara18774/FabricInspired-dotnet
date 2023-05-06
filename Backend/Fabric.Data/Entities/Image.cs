@@ -8,7 +8,7 @@ namespace Fabric.Data.Entities
 {
     public class Image: BaseAttribute
     {
-        public int ProductID { get; set; }
+        public string? ProductID { get; set; }
         public string? Url { get; set;}
 
         public virtual Product? Product { get; set; }

@@ -41,6 +41,8 @@ namespace Fabric.Data.EF
             modelBuilder.ApplyConfiguration(new SaleConfiguration());
             modelBuilder.ApplyConfiguration(new SettingConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
+
+            modelBuilder.Seed();
         }
     }
 }

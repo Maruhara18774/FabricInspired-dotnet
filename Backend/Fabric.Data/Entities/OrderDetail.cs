@@ -8,8 +8,8 @@ namespace Fabric.Data.Entities
 {
     public class OrderDetail: BaseAttribute
     {
-        public int OrderID { get; set; }
-        public int ProductID { get; set; }
+        public string? OrderID { get; set; }
+        public string? ProductID { get; set; }
         public double Metre { get; set; }
         public double Total { get; set; }
 

@@ -19,7 +19,7 @@ namespace Fabric.Data.EF
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            var connectionString = configuration.GetConnectionString("LulusDatabase");
+            var connectionString = configuration.GetConnectionString("FabricDatabase");
 
             var optionBuilder = new DbContextOptionsBuilder<FabricDBContext>();
             optionBuilder.UseSqlServer(connectionString);

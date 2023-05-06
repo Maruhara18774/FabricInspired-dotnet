@@ -8,6 +8,8 @@ namespace Fabric.Data.Entities
 {
     public class Setting : BaseAttribute
     {
-        public string? Value { get; set; }
+        public string? Type { get; set; }
+        public string? Value1 { get; set; }
+        public string? Value2 { get; set; }
     }
 }
