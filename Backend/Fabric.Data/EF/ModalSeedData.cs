@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
+using Image = Fabric.Data.Entities.Image;
 
 namespace Fabric.Data.EF
 {
@@ -71,16 +73,15 @@ namespace Fabric.Data.EF
             for(var i = 0; i < settingData.Count; i++)
             {
                 var key = "STTG" + IDGenerator(i);
-                var setting = settingData[i];
-                settings.Add(new Setting()
-                {
-                    ID = "STTG" + IDGenerator(i++),
-                    Type = setting.Item1,
-                    Value1 = setting.Item2,
-                    Value2 = setting.Item3,
-                });
+                var setting = new Setting(){
+                    ID = key,
+                    SettingType = settingData[i].Item1,
+                    Value1 = settingData[i].Item2,
+                    Value2 = settingData[i].Item3,
+                };
+                modelBuilder.Entity<Setting>().HasData(setting);
+
             }
-            modelBuilder.Entity<Setting>().HasData(settings);
         }
         static void AddProduct(ModelBuilder modelBuilder)
         {
@@ -140,23 +141,21 @@ namespace Fabric.Data.EF
             imageData.Add(("PRDT000001", imagesPRDT000001));
             string[] imagesPRDT000002 = { "https://res.cloudinary.com/dhi3bjn0s/image/upload/v1683397552/Fabric/Teal_Sheer_Grid_Swatch_OO_1000x1000_yedrcg.webp", "https://res.cloudinary.com/dhi3bjn0s/image/upload/v1683397552/Fabric/Teal_Sheer_Grid_Hang_1000x1000_qjtbii.webp", "https://res.cloudinary.com/dhi3bjn0s/image/upload/v1683397552/Fabric/Teal_Sheer_Grid_Roll_1000x1000_gxqmax.webp", "https://res.cloudinary.com/dhi3bjn0s/image/upload/v1683397552/Fabric/Teal_Sheer_Grid_Ruler_1000x1000_jpi3h1.webp" };
             imageData.Add(("PRDT000002", imagesPRDT000002));
-            List<Image> images = new List<Image>();
             var i = 0;
             foreach (var image in imageData)
             {
                 foreach (var image2 in image.Item2)
                 {
-                    images.Add(new Image()
+                    var currentImage = new Image()
                     {
                         ID = "IMGE" + IDGenerator(i),
                         ProductID = image.Item1,
                         Url = image2
-                    });
+                    };
+                    modelBuilder.Entity<Image>().HasData(currentImage);
                     i = i + 1;
                 }
             }
-
-            modelBuilder.Entity<Image>().HasData(images);
         }
 
         static string IDGenerator(int id)
