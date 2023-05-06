@@ -32,33 +32,35 @@ namespace Fabric.Data.EF
             categoryData.Add(("Cotton Fabrics", "Browse our huge range of cotton fabrics here and use the filter to refine your options. This collection includes our exclusive certified Organic Cotton Sweatshirting + Rib and Upcycled Cotton ranges. Our evolving array of designer & Liberty deadstock cotton fabrics provides an ongoing treasure hunt for many a seasoned sewist, with lots of these rolls one-of-a-kind and never to be seen again! Whether you're looking for cotton prints, stripes, checks, shirtings, sateens, denims, chambrays, twills, corduroys, sateens or knitted fabrics, you'll be sure to find something suitable online! Shop cotton fabrics online today!"));
             categoryData.Add(("Jersey & Knitted Fabrics", "Browse all our cotton, viscose & synthetic blend knitted fabrics here and use the filter to refine your options. This collection includes our exclusive certified Organic Cotton Sweatshirting + Rib too. Our evolving array of designer & Liberty deadstock knitted fabrics provides an ongoing treasure hunt for many a seasoned sewist, with lots of these rolls of-of-a-kind and never to be seen again! Whether you're looking for relaxed linens, super soft cottons, fluid viscose and stretchy activewear jerseys. For a casual project with flair choose our printed Liberty cotton knits, and for the cooler days, our range of sweatshirtings are ideal! Shop knitted & jersey fabric online today!"));
 
-            for(var i = 0; i < categories.Count; i++)
+            for(var i = 0; i < categoryData.Count; i++)
             {
                 var key = "CTGR" + IDGenerator(i);
-                var category = categoryData[i];
-                categories.Add(new Category()
+                var category = new Category()
                 {
                     ID = key,
-                    Name = category.Item1,
-                    Description = category.Item2,
-                });
+                    Name = categoryData[i].Item1,
+                    Description = categoryData[i].Item2,
+                };
+                categories.Add(category);
+                modelBuilder.Entity<Category>().HasData(category);
             }
 
-            modelBuilder.Entity<Category>().HasData(categories);
+            
         }
         static void AddPattern(ModelBuilder modelBuilder)
         {
-            string[] patternName = { "Abstract", "Animal", "Check", "Conversational", "Floral", "Geometric", "Large Scale", "Motif", "No Pattern", "Paisley" };
-            for(var i = 0; i < patternName.Length; i++)
+            List<string> patternData = new List<string>() { "Abstract", "Animal", "Check", "Conversational", "Floral", "Geometric", "Large Scale", "Motif", "No Pattern", "Paisley" };
+            for (var i = 0; i < patternData.Count; i++)
             {
                 var key = "PTRN" + IDGenerator(i);
-                patterns.Add(new Pattern()
+                var pattern = new Pattern()
                 {
                     ID = key,
-                    Name = patternName[i],
-                });
+                    Name = patternData[i],
+                };
+                patterns.Add(pattern);
+                modelBuilder.Entity<Pattern>().HasData(pattern);
             }
-            modelBuilder.Entity<Pattern>().HasData(patterns);
         }
         static void AddSetting(ModelBuilder modelBuilder)
         {
