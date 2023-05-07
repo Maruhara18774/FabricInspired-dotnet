@@ -17,6 +17,7 @@ namespace Fabric.Data.Configurations
             builder.ToTable("Categories");
 
             builder.HasKey(x => x.ID);
+            builder.Property(x => x.Name).HasMaxLength(100);
 
         }
     }

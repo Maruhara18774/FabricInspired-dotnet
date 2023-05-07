@@ -1,4 +1,5 @@
 ﻿using Fabric.Data.Entities;
+using Fabric.Data.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -17,6 +18,8 @@ namespace Fabric.Data.Configurations
 
             builder.HasKey(x => x.ID);
             builder.HasOne(x => x.User).WithMany(x => x.Orders).HasForeignKey(x => x.UserID);
+
+            builder.Property(x => x.State).HasDefaultValue(OrderStatusEnum.New);
         }
     }
 }
