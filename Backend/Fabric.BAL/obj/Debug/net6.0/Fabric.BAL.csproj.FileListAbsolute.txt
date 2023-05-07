@@ -1,0 +1,15 @@
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\bin\Debug\net6.0\Fabric.BAL.deps.json
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\bin\Debug\net6.0\Fabric.BAL.dll
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\bin\Debug\net6.0\Fabric.BAL.pdb
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\bin\Debug\net6.0\Fabric.Data.dll
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\bin\Debug\net6.0\Fabric.Data.pdb
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\obj\Debug\net6.0\Fabric.BAL.csproj.AssemblyReference.cache
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\obj\Debug\net6.0\Fabric.BAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\obj\Debug\net6.0\Fabric.BAL.AssemblyInfoInputs.cache
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\obj\Debug\net6.0\Fabric.BAL.AssemblyInfo.cs
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\obj\Debug\net6.0\Fabric.BAL.csproj.CoreCompileInputs.cache
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\obj\Debug\net6.0\Fabric.BAL.csproj.CopyComplete
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\obj\Debug\net6.0\Fabric.BAL.dll
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\obj\Debug\net6.0\refint\Fabric.BAL.dll
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\obj\Debug\net6.0\Fabric.BAL.pdb
+E:\Code-Output\FabricInspired\Backend\Fabric.BAL\obj\Debug\net6.0\ref\Fabric.BAL.dll
